@@ -388,7 +388,7 @@ function reverseWords(str) {
 function invertCase(str) {
   return str
     .split('')
-    .map(function (char) {
+    .map(function invert(char) {
       if (char === char.toUpperCase()) {
         return char.toLowerCase();
       }
@@ -481,7 +481,7 @@ function extractEmails(str) {
 function encodeToRot13(str) {
   return str
     .split('')
-    .map(function (char) {
+    .map(function code13(char) {
       const code = char.charCodeAt(0);
       if (code >= 65 && code <= 90) {
         return String.fromCharCode(((code - 65 + 13) % 26) + 65);
